@@ -3,13 +3,11 @@ import sys
 import re
 
 if __name__ == '__main__':
-        print(sys.argv)
         f = open(sys.argv[1], "r")
         num = int(sys.argv[2])
 
         line = f.readlines()
-        line = re.sub(r"[^a-zA-Z\s]", "", '{}'.format(line))
-
+        
         f.close()
 
         word = []
@@ -17,6 +15,8 @@ if __name__ == '__main__':
 
         for i in range(0, len(line)):
                 word.extend(line[i].split())
+                
+        line = re.sub(r"[^a-zA-Z\s]", "", '{}'.format(line))
 
         for i in range(0, len(word)):
                 if word[i] in D:
