@@ -4,7 +4,7 @@ import re
 
 if __name__ == '__main__':
 	argument = sys.argv
-	#del argument[0]
+	del argument[0]
 	print('>>', format(argument))
 
 f = open("textfile.txt", "r")
